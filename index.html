@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)https://getbootstrap.com/docs/4.3/examples/album/ -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id" content="597237039270-mhh61c6udfac0o0q1v9nuk3s8fd13rtt.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <title>eMercado - Todo lo que busques está aquí</title>
+
+  <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
+  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/styles.css" rel="stylesheet">
+  <link href="css/logincss.css"rel="stylesheet">
+  <style>
+    html, body{
+      height: 100%;
+    }
+
+    body {
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-align: center;
+      align-items: center;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      background-color: #f5f5f5;
+    }
+
+    .signin {
+      width: 100%;
+      max-width: 330px;
+      padding: 15px;
+      margin: auto;
+    }
+    .isValid {
+            background-color:lightgreen;
+            border-color: green;
+            border-width: thick;
+            }  
+  .isInvalid{
+            background-color:lightcoral;
+            border-color: red;
+            border-width: thick;  
+            }
+  </style>
+</head>
+<div class="login">
+	<h1>Registro</h1>
+    <div>
+    	<input type="text" name="u" placeholder="Nombre de usuario"id="user"  />
+        <input type="password" name="p" placeholder="Contraseña"  id="pass"/>
+        <span id="msj"></span><br>
+        <button  class="btn btn-primary btn-block btn-large" onclick="verificar()">Entrar</button><br>
+        <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+    </div>
+    <script src="js/init.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
