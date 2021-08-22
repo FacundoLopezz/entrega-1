@@ -40,12 +40,22 @@ var getJSONData = function(url){
     });
 }
 
+function onLoad(){
+  gapi.load("auth2",function(){
+  gapi.auth2.init();
+  });
+}
+
+
 function signOut(){
   var auth2 = gapi.auth2.getAuthInstance();
   auth2.signOut().then(function(){
   });
-  localStorage.clear(); ///Borra toooodo el localStorage
-  location.href="index.html"; //De donde esté, no importa dónde, me envía a index.html
+}
+function desconectar(){
+  localStorage.clear(); 
+  signOut();
+  location.href="index.html"; 
 }
 
 document.addEventListener("DOMContentLoaded", function(e){
