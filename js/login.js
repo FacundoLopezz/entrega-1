@@ -46,7 +46,7 @@ if (user.value.trim() ==='' || pass.value.trim()==='')
     }else {   
         location.href ="inicio.html"; 
 
-        usuario.nombre = dato.value;
+        usuario.nombre = user.value;
         usuario.estado ="conectado";
 
         localStorage.setItem('user',JSON.stringify(usuario)); 
