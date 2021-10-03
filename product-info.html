@@ -13,13 +13,9 @@
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
-  <style>
-    i {
-        color:tomato;
-    }
-</style>
-</head>
+  <link href="css/product-info.css" rel="stylesheet">
 
+</head>
 <body>
 
 
@@ -30,24 +26,41 @@
       <i class="fas fa-bars"><a class="py-2 d-none d-md-inline-block" href="categories.html">Categorías</a></i>
       <i class="fas fa-store-alt"><a class="py-2 d-none d-md-inline-block" href="products.html">Productos</a></i>
       <i class="far fa-money-bill-alt"><a class="py-2 d-none d-md-inline-block" href="sell.html"> Vender</a></i>
-      <i class="fas fa-cart-arrow-down"> <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a></i>
-      <i class="far fa-user">  <a  class="py-2 d-none d-md-inline-block" id="perfil" href="#" ></a> </i>
+
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="far fa-user">  <a  class="py-2 d-none d-md-inline-block" id="perfil" href="#" ></a> </i>
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <i class="fas fa-cart-arrow-down"> <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a></i><br>
+          <i class="far fa-user"><a class="py-2 d-none d-md-inline-block" href="my-profile.html"> Mi perfil</a></i>
+          <button id="salir">desconectar</button>
+        </div>
+
+      </div>
     </div>
   </nav>
 
 
 
 
-  <div id="muestra"></div>
-  <div id="imagenes" class=" justify-end " ></div><br>
-  <br>
+  <div id="muestra"></div> <br>
+
+
+   <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel"> </div><br>
+
+<nav class="site-header sticky-top py-1 bg-dark">
+   <h3 class="text-center">Comentarios</h3></nav><br><br>
+
   <div class="text-center">
   <label >Comenta<input type="text" id="comentario"></label>
   <label> Puntua <input class="form-control" type ="number" id=estrellas max="5"min="1" > </label>
   <button onclick="mostrar (lista)" class="btn btn-primary" id="enviar">Enviar</button>
   </div>
 
-  <h3 class="text-center">Comentarios</h3>
+
+
+  
   <div id="comentarios">  </div>
   <div >
     <table class="text-center table ">
@@ -58,11 +71,34 @@
 </div>
 
 
+<nav class="site-header sticky-top py-1 bg-dark">
+  <h3 class="text-center">Busquedas relacionadas</h3></nav><br><br>
+
+  <div id="relacionados"></div><br>
+ 
+
+<!----------------------------------------------------------------------------------------------------------------------------->
 
 
-  <footer class="text-muted">
-  </footer>
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -82,6 +118,8 @@
   <script src="js/init.js"></script>
   <script src="js/product-info.js"></script>
   <script src="js/usuario.js"></script>
+  <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+  
 </body>
 
 </html>

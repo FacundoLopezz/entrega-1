@@ -1,0 +1,21 @@
+i { color:tomato;  }
+h3{color: white;}
+
+
+
+
+div#carouselExampleSlidesOnly{ 
+    margin: auto;
+    width: 800px; 
+    height: 500px;
+ 
+   
+}
+
+img#fotos{
+
+    margin-left: 150px;
+    width: 500px; 
+    height: 400px;
+
+}

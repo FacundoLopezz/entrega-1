@@ -52,11 +52,13 @@ function signOut(){
   auth2.signOut().then(function(){
   });
 }
-function desconectar(){
+
+document.getElementById("salir").addEventListener("click", () => {
+
   localStorage.clear(); 
   signOut();
   location.href="index.html"; 
-}
+})
 
 document.addEventListener("DOMContentLoaded", function(e){
 });

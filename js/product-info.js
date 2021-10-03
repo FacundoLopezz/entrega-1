@@ -1,20 +1,39 @@
+var categoriesArray = [];
+let comentariosArray=[];
+let relacionArray=[];
+
+
 
 document.addEventListener("DOMContentLoaded", function(e){
+
+
   getJSONData(PRODUCT_INFO_URL).then(function(resultObj){
     if (resultObj.status === "ok")
     {
         categoriesArray = resultObj.data;
-        showCategoriesList(categoriesArray);
-        imagenes()
+        showCategoriesList();
+        carrusel();
+     
     }
 });
+
 getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function(resultObj){
     if (resultObj.status === "ok")
     {
         comentariosArray = resultObj.data;
-        comentarios(comentariosArray)
+        comentarios()
     }
-})
+});
+
+getJSONData(PRODUCTS_URL).then(function(resultObj){
+    if (resultObj.status === "ok")
+    {
+        relacionArray = resultObj.data;
+        relacionados()
+    }
+});
+
+
 });
 
 
@@ -22,7 +41,6 @@ getJSONData(PRODUCT_INFO_COMMENTS_URL).then(function(resultObj){
 //--------------------------------------------------------------------- Categorias
 
 
-var categoriesArray = [];
 
 function showCategoriesList(){
 
@@ -37,7 +55,7 @@ function showCategoriesList(){
                   <div class="col">
                       <div class="d-flex w-100 justify-content-between">
                           <h4 class="mb-1">`+ categoriesArray.name +`</h4>
-                          <small class="text-muted">` + categoriesArray.soldCount + ` artículos</small>
+                          <small class="text-muted">` + categoriesArray.soldCount + ` artículos</small><br>
                           <small class="text-muted">` + categoriesArray.currency + ` ` + categoriesArray.cost +`</small>
                       </div>
                      <p class="mb-1">`+ categoriesArray.description +`</p> 
@@ -50,16 +68,33 @@ function showCategoriesList(){
                document.getElementById("muestra").innerHTML = htmlContentToAppend;}
 
 
-function imagenes(){
-let imagenes=""
-    for(category of categoriesArray.images){
-        imagenes+=`;
-         <img src=" `   + category  +  `" style="width:300px" >`
+
+
+
+function carrusel(){
+    let carrucel="";
+ 
+    carrucel +=`<div class="carousel-inner"  data-ride="carousel" ">
+    <div class="carousel-item active" >
+        <img src="`+categoriesArray.images[0]+`" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="`+categoriesArray.images[1]+`" class="d-block w-100" >
+    </div>
+    <div class="carousel-item">
+      <img src="`+categoriesArray.images[2]+`" class="d-block w-100" >
+    </div>
+    <div class="carousel-item">
+    <img src="`+categoriesArray.images[3]+`" class="d-block w-100">
+  </div>
+  <div class="carousel-item">
+  <img src="`+categoriesArray.images[4]+`" class="d-block w-100" >
+</div>
+  </div>`
+
+  document.getElementById("carouselExampleSlidesOnly").innerHTML = carrucel;
 }
 
-document.getElementById("imagenes").innerHTML = imagenes;
-
-}
 
 
 
@@ -86,8 +121,8 @@ comentarios += `
 
  //---------------------------------------------------------------------------------------------------------------- Comentarios
 
+ let lista = []; 
 
-let lista = []; 
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -142,3 +177,18 @@ document.addEventListener("DOMContentLoaded", () => {
     return estrellas;
     }
     
+
+
+
+    function relacionados (){
+let rela="";
+categoriesArray.relatedProducts.forEach((i) => {
+    rela +=`
+   "<img src=`+relacionArray[i].imgSrc+` id=fotos>"
+    "<h1 >`+ relacionArray[i].name+ `</h1>"`
+});
+document.getElementById("relacionados").innerHTML +=rela;
+
+    }
+
+
