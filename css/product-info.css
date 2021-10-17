@@ -19,3 +19,11 @@ img#fotos{
     height: 400px;
 
 }
+img#carro{
+    width: 150px; 
+    height: 80px;
+}
+
+h2{margin-left: 1250px;
+    border: red 3px solid;
+    margin-right: 60px;}

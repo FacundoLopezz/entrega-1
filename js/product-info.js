@@ -147,13 +147,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     for ( let persona of lista) {    
         filas +=`
-        <table class="text-center table ">
+       
          <tr>
                <td>`+ "tu nombre"  +`</td>
                <td> `+ persona.comentario +`</td>
                <td>` +califico(persona.estrellas)  + `</td> 
     
-           </tr></tabla>`
+           </tr>`
     }
     tabla.innerHTML = filas;
     console.log(lista);
