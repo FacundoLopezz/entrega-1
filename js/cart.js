@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function(e){
   <tr>  
   <td> <img src="`+element.src+`" id=carro ></td>
   <td>`+ element.name+`</td>
-  <td>  <input value="` +element.count + `  " type ="number" id='cant${element}' onchange='sumar()'  > </td> 
+  <td>  <input value="`+element.count+ `" type ="number" id='cant${element}' onchange='sumar()' min="1" > </td> 
   <td > USD <span class='precio'>` + costo + `</span></td>
   <td><span  id='res${id}'> </span></td>
 
