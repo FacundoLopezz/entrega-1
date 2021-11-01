@@ -27,17 +27,17 @@ function onSignIn(googleUser) {
 
 
 
-    let user = document.getElementById("user");
+    let nick = document.getElementById("nick");
     let pass = document.getElementById("pass");
     let msj = document.getElementById("msj");
-    let usuario={}
+    let perfil={}
 
 function verificar(){
 
-if (user.value.trim() ==='' || pass.value.trim()==='')
+if (nick.value.trim() ==='' || pass.value.trim()==='')
     {
         
-        user.classList.add("isInvalid"); 
+        nick.classList.add("isInvalid"); 
         msj.innerHTML="Dato requerido";
         msj.style.color="red"; 
         msj.style.display="block"; 
@@ -46,12 +46,12 @@ if (user.value.trim() ==='' || pass.value.trim()==='')
     }else {   
         location.href ="inicio.html"; 
 
-        usuario.nombre = user.value;
-        usuario.estado ="conectado";
-
-        localStorage.setItem('user',JSON.stringify(usuario)); 
+        perfil.nick = nick.value;
+        perfil.pass = pass.value;
         
-        sessionStorage.setItem('user',JSON.stringify(usuario)); 
+        localStorage.setItem('perfil',JSON.stringify(perfil)); 
+        
+        sessionStorage.setItem('perfil',JSON.stringify(perfil)); 
         
      
     }

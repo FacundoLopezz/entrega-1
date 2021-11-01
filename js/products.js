@@ -34,28 +34,37 @@ if (maximo == ""){
     (maximo= 100000)
 }   
 
-    let htmlContentToAppend = "";
+    let htmlContentToAppend = `  
+    <div id="listaestilo" class="container mt-12 m border">
+      <div class="row "> `;
+
     for(let i = 0; i < categoriesArray.length; i++){
         let category =categoriesArray[i];
 if (category.cost>= minimo && category.cost<=maximo ){
 
         htmlContentToAppend += `
-        <div class="list-group-item list-group-item-action">
-            <div class="row">
-                <div class="col-3">
-                    <img src="` + category.imgSrc + `" alt="` + category.description + `" class="img-thumbnail">
+       
+           
+ 
+     
+           <div class="col-sm-4">
+                <div >
+                <br>
+                    <img  style="max-width:100%;height:auto;" class="bd-placeholder-img card-img-top" src="` + category.imgSrc + `" alt="` + category.description + `" >
                 </div>
-                <div class="col">
-                    <div class="d-flex w-100 justify-content-between">
-                        <h4 class="mb-1">`+ category.name +`</h4>
+                <div >
+                    <div >
+                    <a href="product-info.html">  <h4 >`+ category.name +`</h4></a>
+                    <small >` + category.soldCount + ` artículos</small>
+                        <p >` + category.currency + ` ` + category.cost +`</p>
                         
-                        <small class="text-muted">` + category.soldCount + ` artículos</small>
-                        <small class="text-muted">` + category.currency + ` ` + category.cost +`</small>
                     </div>
-                   <p class="mb-1">`+ category.description +`</p> 
-                </div>
+                   <p  class="card-text">`+ category.description +`</p> 
             </div>
-        </div>
+            </div>
+   
+              
+        
         `
 
        

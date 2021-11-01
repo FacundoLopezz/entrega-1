@@ -61,7 +61,6 @@ id++      ; }      );
 
   
         total+= parseFloat(precios[i].innerHTML) * parseFloat(cantidades[i].value);
-
         document.getElementById('res'+i).innerHTML = parseFloat(precios[i].innerHTML) * parseFloat(cantidades[i].value);
     }
 

@@ -5,6 +5,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
     <title>eMercado - Todo lo que busques está aquí</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.3/examples/album/">
@@ -12,6 +15,7 @@
     <link href="css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/styles.css" rel="stylesheet">
+    <link href="css/MiCss.css" rel="stylesheet">
     <STYLE type="text/css">
       DIV.precio {text-align: right}
      </STYLE>
@@ -26,7 +30,7 @@
   
         <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            <i class="far fa-user">  <a  class="py-2 d-none d-md-inline-block" id="perfil" href="#" ></a> </i>
+            <img id="foto2" src="" height="50" > <a  class="py-2 d-none d-md-inline-block" id="perfil" href="#" ></a> 
           </button>
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <i class="fas fa-cart-arrow-down"> <a class="py-2 d-none d-md-inline-block" href="cart.html">Mi carrito</a></i><br>
@@ -40,6 +44,7 @@
     <main role="main" class="pb-5">
       <div class="text-center p-4">
           <h2>Listado</h2>
+          <hr>
       </div>
       <div class="precio" >  
         <button class="btn btn-primary" id="precio" >Precio <i class="fas fa-caret-down"></i></button>
@@ -48,17 +53,24 @@
         <label> Precio min <input type ="number"placeholder="USD"autocomplete="off" id=min  > </label>
         <button class="btn btn-primary" id="aplicar"  >Aplicar</button>
       </div>
-      <div class="container">
-          <div class="row">
-              <div class="list-group" id="cat-list-container">
-              </div>
-          </div>
-      </div>
-  </main>
-  <div id="spinner-wrapper" ><div class="lds-ring"   ><div>></div><div></div><div></div></div></div>
+    </main>
+
+    
+    
+      <div  id="cat-list-container"></div>
+<br>
+<br>
+  
+
+  <div id="spinner-wrapper" ><div class="lds-ring"   ><div></div>
+
+
+
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/init.js"></script>
     <script src="js/products.js"></script>
+    <script src="js/usuario.js"></script>
+    <script src="js/my-profile2.js"></script>
   </body>
 </html>
