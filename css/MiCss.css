@@ -17,7 +17,12 @@ div#listaestilo{
      height: 70px;
  }
 
- 
+ body#fondo{background-color: #99edf180;}
+
+div#datos{
+    background-color: rgba(172, 172, 172, 0.849)
+
+}
 div#carouselExampleSlidesOnly{ 
     margin: auto;
     width: 800px; 
