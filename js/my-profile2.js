@@ -44,15 +44,8 @@ function convertir(img) {
      perfil.imagen =foto_perfil
      
      localStorage.setItem('foto',JSON.stringify( perfil)); 
-
-
-
      
   }
-
-
-
-
 
 
   document.addEventListener('DOMContentLoaded',()=>{
@@ -62,11 +55,8 @@ function convertir(img) {
    
     if (perfil != null){
         
-
       document.getElementById('foto1').src = perfil.imagen;
  
-   
     }
-   
-
+  
   })

@@ -48,12 +48,35 @@ img#carro{
 }
 
 
-
 table {
 
     border: 2px solid #000;
     background-color: #ddddddb0;
+
  }
+table#emergente{
+
+    border: 2px solid rgba(255, 255, 255, 0.445);
+    background-color: #dddddd00;
+ }
+.emergente {
+    background: rgb(255, 255, 255);
+    border: 2px solid rgba(196, 189, 189, 0.747);
+ }
+ .emergente1 {
+    background: rgb(224, 216, 94);
+    border: 2px solid rgba(236, 234, 234, 0.178); 
+ }
+
+span#total{
+font-size: 150% ;
+color: rgb(19, 167, 39)}
+
+.grande{
+    font-size: 250% ;
+color: rgb(248, 73, 73)
+}
+ 
  th, td {
     
     text-align: left;
@@ -69,3 +92,8 @@ table {
     border: 2px solid #000;
    
  }
+
+div#tabla{
+    width:1300px ;
+    margin-left: 200px;
+}
